@@ -42,10 +42,7 @@ def split_passports(data: str) -> list:
 
 
 def get_passport_fields(list_of_passport_fields: str) -> dict:
-    return {
-        field.split(":")[0]: field.split(":")[1]
-        for field in list_of_passport_fields.split()
-    }
+    return {field.split(":")[0]: field.split(":")[1] for field in list_of_passport_fields.split()}
 
 
 def validate(passport: dict, req_keys: list) -> bool:
