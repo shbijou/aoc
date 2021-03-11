@@ -13,9 +13,18 @@ click = "^7.1.2"
 mypy = "^0.812"
 pytest = "^6.2.2"
 pre-commit = "^2.11.1"
+ipython = "^7.21.0"
 
 [tool.black]
 line-length = 120
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-v --tb=short"
+testpaths = [
+    "tests",
+    "integration",
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
